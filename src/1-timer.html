@@ -4,12 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Timer</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <section>
       <a href="./index.html">Go to home</a>
       <h1>Welcome to Timer</h1>
+      <input class="timer-input" type="text" id="datetime-picker" />
+      <button class="start-btn js-start-btn" type="button" data-start>
+        Start
+      </button>
+
+      <div class="timer">
+        <div class="field">
+          <span class="value js-days" data-days>00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="field">
+          <span class="value js-hours" data-hours>00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="field">
+          <span class="value js-minutes" data-minutes>00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="field">
+          <span class="value js-seconds" data-seconds>00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
     </section>
     <script type="module" src="./js/1-timer.js"></script>
   </body>
