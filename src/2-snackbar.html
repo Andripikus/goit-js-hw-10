@@ -11,7 +11,41 @@
     <section>
       <a href="./index.html">Go to home</a>
       <h1>Welcome to Snackbar</h1>
+      <form class="form js-form">
+        <label class="label-text">
+          Delay (ms)
+          <input class="delay js-delay" type="number" name="delay" required />
+        </label>
+
+        <fieldset class="fieldset">
+          <legend class="legend-text">State</legend>
+          <label>
+            <input
+              class="state js-fulfilled"
+              type="radio"
+              name="state"
+              value="fulfilled"
+              required
+            />
+            Fulfilled
+          </label>
+          <label>
+            <input
+              class="state js-rejected"
+              type="radio"
+              name="state"
+              value="rejected"
+              required
+            />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button class="submit-btn js-submit-btn" type="submit">
+          Create notification
+        </button>
+      </form>
     </section>
-    <script type="module" src="./2-snackbar.html"></script>
+    <script type="module" src="./js/2-snackbar.js"></script>
   </body>
 </html>
