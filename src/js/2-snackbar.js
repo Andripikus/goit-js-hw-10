@@ -2,17 +2,19 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('.js-form');
-  const delayInput = document.querySelector('.js-delay');
-  const fulfilledRadio = document.querySelector('.js-fulfilled');
-  const rejectedRadio = document.querySelector('.js-rejected');
-  const submitBtn = document.querySelector('.js-submit-btn');
+  const elements = {
+    form: document.querySelector('.js-form'),
+    delayInput: document.querySelector('.js-delay'),
+    fulfilledRadio: document.querySelector('.js-fulfilled'),
+    rejectedRadio: document.querySelector('.js-rejected'),
+    submitBtn: document.querySelector('.js-submit-btn'),
+  };
 
-  form.addEventListener('submit', function (event) {
+  elements.form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const delay = parseInt(delayInput.value);
-    const state = fulfilledRadio.checked ? 'fulfilled' : 'rejected';
+    const delay = parseInt(elements.delayInput.value);
+    const state = elements.fulfilledRadio.checked ? 'fulfilled' : 'rejected';
 
     const promise = new Promise((resolve, reject) => {
       setTimeout(() => {
