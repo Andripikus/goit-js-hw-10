@@ -6,13 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snackbar</title>
     
-    <script type="module" crossorigin src="/goit-js-hw-10/assets/styles-77ecf156.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-2e685d08.css">
+    <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/styles-007ed776.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-77e16229.js">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-ff2b17b8.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-7a007824.css">
   </head>
   <body>
     <section>
       <a href="./index.html">Go to home</a>
       <h1>Welcome to Snackbar</h1>
+      <form class="form js-form">
+        <label class="label-text">
+          Delay (ms)
+          <input class="delay js-delay" type="number" name="delay" required />
+        </label>
+
+        <fieldset class="fieldset">
+          <legend class="legend-text">State</legend>
+          <label>
+            <input
+              class="state js-fulfilled"
+              type="radio"
+              name="state"
+              value="fulfilled"
+              required
+            />
+            Fulfilled
+          </label>
+          <label>
+            <input
+              class="state js-rejected"
+              type="radio"
+              name="state"
+              value="rejected"
+              required
+            />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button class="submit-btn js-submit-btn" type="submit">
+          Create notification
+        </button>
+      </form>
     </section>
     
   </body>
